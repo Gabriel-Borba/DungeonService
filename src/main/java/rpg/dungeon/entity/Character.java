@@ -1,7 +1,6 @@
 package rpg.dungeon.entity;
 
 import rpg.dungeon.controller.request.CharacterRequest;
-import rpg.dungeon.controller.request.UserRequest;
 
 import javax.persistence.OneToOne;
 import javax.persistence.JoinColumn;
@@ -17,21 +16,14 @@ import javax.persistence.Column;
 public class Character {
 
 
-
-    public Character(CharacterRequest characterRequest) {
-
+    public Character(CharacterRequest characterRequest, User user) {
         this.nickname = characterRequest.getNickname();
-
         this.strength = characterRequest.getStrength();
-
         this.dexterity = characterRequest.getDexterity();
-
         this.wisdom = characterRequest.getWisdom();
-
         this.constitution = characterRequest.getConstitution();
-
         this.charisma = characterRequest.getCharisma();
-
+        this.user = user;
     }
 
 

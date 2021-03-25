@@ -20,6 +20,7 @@ public class CharacterRequest {
 
     private Integer level;
 
+    private Long userId;
 
     public CharacterRequest(String nickname, Long strength, Long dexterity, Long wisdom, Long constitution, Long charisma, Long intelligence, Long experience, Integer level) {
         this.nickname = nickname;
@@ -67,5 +68,9 @@ public class CharacterRequest {
 
     public Integer getLevel() {
         return level;
+    }
+
+    public Long getUserId() {
+        return userId;
     }
 }
