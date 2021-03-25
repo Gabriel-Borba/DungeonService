@@ -34,6 +34,7 @@ public class CharacterRequest {
         this.level = level;
     }
 
+
     public String getNickname() {
         return nickname;
     }

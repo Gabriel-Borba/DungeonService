@@ -9,8 +9,6 @@ import rpg.dungeon.service.CharacterService;
 
 @RestController
 @RequestMapping("/character")
-
-
 public class CharacterController {
 
     private CharacterService characterService;
@@ -20,7 +18,7 @@ public class CharacterController {
     }
 
     @PostMapping
-    public CharacterResponse saveCharacter(CharacterRequest characterRequest) {
+    public CharacterResponse saveCharacter(@RequestBody  CharacterRequest characterRequest) {
         Character character = characterService.saveCharacter(characterRequest);
         return new CharacterResponse(character);
     }
