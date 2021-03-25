@@ -11,6 +11,9 @@ public class User {
         this.name = userRequest.getName();
     }
 
+    public User() {
+    }
+
     @Id
     @Column
     @GeneratedValue(strategy = GenerationType.IDENTITY)
