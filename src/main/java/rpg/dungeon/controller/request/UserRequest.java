@@ -9,9 +9,7 @@ public class UserRequest {
     public UserRequest(String name){
         this.name = name;
     }
-    public UserRequest(){
-
-    }
+    public UserRequest(){ }
 
 
 

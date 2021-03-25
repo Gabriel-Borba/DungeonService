@@ -1,5 +1,8 @@
 package rpg.dungeon.entity;
 
+import rpg.dungeon.controller.request.CharacterRequest;
+import rpg.dungeon.controller.request.UserRequest;
+
 import javax.persistence.OneToOne;
 import javax.persistence.JoinColumn;
 import javax.persistence.Id;
@@ -12,6 +15,26 @@ import javax.persistence.Column;
 
 @Entity
 public class Character {
+
+
+
+    public Character(CharacterRequest characterRequest) {
+
+        this.nickname = characterRequest.getNickname();
+
+        this.strength = characterRequest.getStrength();
+
+        this.dexterity = characterRequest.getDexterity();
+
+        this.wisdom = characterRequest.getWisdom();
+
+        this.constitution = characterRequest.getConstitution();
+
+        this.charisma = characterRequest.getCharisma();
+
+    }
+
+
     @Id
     @Column
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -44,7 +67,45 @@ public class Character {
     @Column
     private Integer level;
 
+
     @OneToOne
     @JoinColumn(name = "id_user")
     private User user;
+
+
+    public String getNickname() {
+        return nickname;
+    }
+
+    public Long getStrength() {
+        return strength;
+    }
+
+    public Long getDexterity() {
+        return dexterity;
+    }
+
+    public Long getWisdom() {
+        return wisdom;
+    }
+
+    public Long getCharisma() {
+        return charisma;
+    }
+
+    public Long getIntelligence() {
+        return intelligence;
+    }
+
+    public Long getExperience() {
+        return experience;
+    }
+
+    public Integer getLevel() {
+        return level;
+    }
+
+    public Long getConstitution() {
+        return constitution;
+    }
 }

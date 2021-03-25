@@ -7,7 +7,7 @@ public class UserResponse {
     private Long id;
 
     public UserResponse(User user){
-        this.id=user.getId();
+        this.id= user.getId();
         this.name= user.getName();
     }
 

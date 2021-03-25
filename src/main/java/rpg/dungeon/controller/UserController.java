@@ -21,5 +21,4 @@ public class UserController {
         user = userRepository.save(user);
         return new UserResponse(user);
     }
-
 }
